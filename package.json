@@ -1,26 +1,11 @@
 {
-  "name": "service-demo",
   "version": "1.0.0",
-  "description": "service demo for seneca",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xunyijia/service-demo.git"
-  },
-  "keywords": [
-    "service",
-    "seneca",
-    "demo"
-  ],
   "author": "xunyijia",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xunyijia/service-demo/issues"
-  },
-  "homepage": "https://github.com/xunyijia/service-demo#readme",
   "dependencies": {
     "glob": "^7.1.1",
     "mongoose": "^4.8.2",
