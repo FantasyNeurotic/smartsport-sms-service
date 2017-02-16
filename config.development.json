@@ -1,0 +1,13 @@
+{
+  "mongodb": "mongodb://127.0.0.1/smartsport-db-1",
+  "senecaLogLevel": "none",
+  "role": "seneca-demo",
+  "senecaPort": 10001,
+  "logger": {
+    "consoleLevel": 4,
+    "fileLevel": 1,
+    "maxsize": 100000,
+    "maxFiles": 20,
+    "path": "logs/"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+.vscode/
+mochawesome-reports/
+.DS_Store
+.idea
+*.log
+npm-debug.log

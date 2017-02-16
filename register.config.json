@@ -1,0 +1,17 @@
+{
+  "demo-service": {
+    "description": "服务描述",
+    "arguments": ["demo"],
+    "methods": [{
+      "description": "方法描述",
+      "senecaCmd": "demo_create",
+      "serviceMethod": "create",
+      "static": false
+    }, {
+      "description": "方法描述",
+      "senecaCmd": "demo_update",
+      "serviceMethod": "update",
+      "static": true
+    }]
+  }
+}
