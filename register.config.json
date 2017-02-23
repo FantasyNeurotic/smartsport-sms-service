@@ -1,17 +1,17 @@
 {
-  "demo-service": {
-    "description": "服务描述",
-    "arguments": ["demo"],
+  "sms-service": {
+    "description": "sms service",
+    "arguments": ["verify-code"],
     "methods": [{
-      "description": "方法描述",
-      "senecaCmd": "demo_create",
-      "serviceMethod": "create",
+      "description": "获取和发送验证码",
+      "senecaCmd": "sms_get",
+      "serviceMethod": "getAndSend",
       "static": false
     }, {
-      "description": "方法描述",
-      "senecaCmd": "demo_update",
-      "serviceMethod": "update",
-      "static": true
+      "description": "验证",
+      "senecaCmd": "sms_verify",
+      "serviceMethod": "verify",
+      "static": false
     }]
   }
 }

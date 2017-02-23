@@ -1,13 +1,21 @@
 {
   "mongodb": "mongodb://127.0.0.1/smartsport-db-1",
   "senecaLogLevel": "none",
-  "role": "seneca-demo",
-  "senecaPort": 10001,
+  "role": "sms",
+  "senecaPort": 10011,
   "logger": {
     "consoleLevel": 4,
     "fileLevel": 1,
     "maxsize": 100000,
     "maxFiles": 20,
     "path": "logs/"
+  },
+  "sms": {
+    "expiredTime": 60000,
+    "alidayu": {
+      "appkey": "23438206",
+      "appsecret": "63c3db3ba3013f9d793ca28ea5f0a4f7",
+      "REST_URL": "http://gw.api.taobao.com/router/rest"
+    }
   }
 }
