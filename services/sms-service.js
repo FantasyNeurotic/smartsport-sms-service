@@ -7,8 +7,8 @@ function genVerifyCode(number) {
   let length = number || 0;
   if (length < 4) length = 4;
   if (length > 20) length = 20;
-  const num = ((10 ** length) - (10 ** (length - 1))) + 1;
-  return parseInt((Math.random() * num) + (10 ** (length - 1)), 10);
+  const num = (Math.pow(10, length) - Math.pow(10, length - 1)) + 1;
+  return parseInt((Math.random() * num) + Math.pow(10, length - 1), 10);
 }
 
 function sendSmsAndSave(verifyCode) {
