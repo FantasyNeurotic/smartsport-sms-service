@@ -13,8 +13,8 @@
   "sms": {
     "expiredTime": 60000,
     "alidayu": {
-      "appkey": "23438206",
-      "appsecret": "63c3db3ba3013f9d793ca28ea5f0a4f7",
+      "appkey": "23659066",
+      "appsecret": "1cdb98041f2470c31c155eb2dd8887dd",
       "REST_URL": "http://gw.api.taobao.com/router/rest"
     }
   }

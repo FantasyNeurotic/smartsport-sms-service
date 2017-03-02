@@ -11,20 +11,9 @@ function genVerifyCode(number) {
   return parseInt((Math.random() * num) + (10 ** (length - 1)), 10);
 }
 
-// function sendSmsAndSave(verifyCode) {
-//   return SmsServer
-//     .sendVerifyCode(verifyCode.tel, verifyCode.code, verifyCode.usage)
-//     .then(() => {
-//       if (verifyCode.updateAt) {
-//         verifyCode.updateAt = new Date();
-//       }
-//       return verifyCode.save();
-//     });
-// }
-
-function sendSmsAndSave(code) {
-  const verifyCode = code;
-  return Promise.resolve()
+function sendSmsAndSave(verifyCode) {
+  return SmsServer
+    .sendVerifyCode(verifyCode.tel, verifyCode.code, verifyCode.usage)
     .then(() => {
       if (verifyCode.updateAt) {
         verifyCode.updateAt = new Date();
