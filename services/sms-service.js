@@ -44,7 +44,8 @@ class SMSService {
             .then(() => done(null, { success: true, msg: '验证码重发成功' }));
         }
         return done(null, { success: false, msg: '请求验证码过于频繁,请稍后再试' });
-      });
+      })
+    .catch(done);
   }
   verify(msg, done) {
     // 校验msg.data存在
