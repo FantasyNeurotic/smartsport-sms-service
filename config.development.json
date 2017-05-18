@@ -3,6 +3,14 @@
   "senecaLogLevel": "none",
   "role": "sms",
   "senecaPort": 10011,
+  "consul": {
+    "host": "127.0.0.1",
+    "port": 8500,
+    "name": "sms",
+    "tags": ["sms"],
+    "address": "127.0.0.1",
+    "servicePort": 10011
+  },
   "logger": {
     "consoleLevel": 4,
     "fileLevel": 1,
