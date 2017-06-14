@@ -56,7 +56,14 @@ class SMSService {
       .findOne({ tel: msg.data.tel, system: msg.data.system, usage: msg.data.usage })
       .then((code) => {
         if (!code) {
-          return done(null, { success: false, msg: '验证码超时或重复验证' });
+          return this.Model
+            .findOne({ code: msg.data.code, system: msg.data.system, usage: msg.data.usage })
+            .then((result) => {
+              if (result && result.tel !== msg.data.tel) {
+                return done(null, { success: false, msg: '手机号与申请验证码的手机不一致' });
+              }
+              return done(null, { success: false, msg: '验证码超时或重复验证' });
+            });
         }
         if (code.code !== msg.data.code) {
           return done(null, { success: false, msg: '验证码错误' });
@@ -64,7 +71,8 @@ class SMSService {
         return this.Model
           .remove({ tel: msg.data.tel, system: msg.data.system, usage: msg.data.usage })
           .then(() => done(null, { success: true, msg: '验证成功' }));
-      });
+      })
+      .catch(done);
   }
 }
 
